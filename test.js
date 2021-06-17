@@ -1,8 +1,17 @@
 
 
-function buscar() {
+function busqueda()
+{
+    let accion = document.getElementById("search").value.toLowerCase();
+    if(accion.match(/(¿Qué (es|son) (la|el|los|un|unos | )[a-zA-Z0-9]+\?)/g)==null)
+    {
+        
+    }
+}
 
-    let palabra = document.getElementById("search").value.toLowerCase();
+
+
+function buscarPalabra(palabra) {
     apiURL =  "https://api.dictionaryapi.dev/api/v2/entries/es/"+ palabra;
 
     encontrarPalabra();
